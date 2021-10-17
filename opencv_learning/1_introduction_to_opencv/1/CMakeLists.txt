@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.16)
-project( DisplayImage )
+project( 1_1_displayImage )
 find_package( OpenCV REQUIRED )
 include_directories( ${OpenCV_INCLUDE_DIRS} )
-add_executable( DisplayImage main.cpp )
-target_link_libraries( DisplayImage ${OpenCV_LIBS} )
+add_executable( ${PROJECT_NAME} main.cpp )
+target_link_libraries( ${PROJECT_NAME} ${OpenCV_LIBS} )
 
 add_custom_command(
     TARGET ${PROJECT_NAME} POST_BUILD
