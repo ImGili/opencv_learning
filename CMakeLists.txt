@@ -9,4 +9,5 @@ add_subdirectory(opencv_learning/1_introduction_to_opencv/2)
 
 
 add_subdirectory(opencv_learning/2_core_functionality/1_mat_basic_container/1)
+add_subdirectory(opencv_learning/2_core_functionality/1_mat_basic_container/2)
 
