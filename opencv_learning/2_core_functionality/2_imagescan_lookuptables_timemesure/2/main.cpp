@@ -8,6 +8,7 @@ using namespace cv;
 
 Mat &ScanImageAndReduceC(Mat &I, const uchar *const table)
 {
+
     CV_Assert(I.depth() == CV_8U);
     int nChannels = I.channels();
 
@@ -16,10 +17,8 @@ Mat &ScanImageAndReduceC(Mat &I, const uchar *const table)
     case 1:
         {
             MatIterator_<uchar> it, end;
-            for (it = I.begin<uchar>(), end = I.end<uchar>(); it != end; ++it)
-            {
+            for( it = I.begin<uchar>(), end = I.end<uchar>(); it != end; ++it)
                 *it = table[*it];
-            }
             break;
         }
     case 3:
@@ -27,9 +26,9 @@ Mat &ScanImageAndReduceC(Mat &I, const uchar *const table)
             MatIterator_<Vec3b> it, end;
             for (it = I.begin<Vec3b>(), end = I.end<Vec3b>(); it != end; ++it)
             {
+                (*it)[0] = table[(*it)[0]];
                 (*it)[1] = table[(*it)[1]];
                 (*it)[2] = table[(*it)[2]];
-                (*it)[3] = table[(*it)[3]];
             }
             break;
         }
