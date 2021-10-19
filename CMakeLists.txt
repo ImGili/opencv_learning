@@ -15,4 +15,5 @@ add_subdirectory(opencv_learning/2_core_functionality/1_mat_basic_container/3)
 
 add_subdirectory(opencv_learning/2_core_functionality/2_imagescan_lookuptables_timemesure/1)
 add_subdirectory(opencv_learning/2_core_functionality/2_imagescan_lookuptables_timemesure/2)
+add_subdirectory(opencv_learning/2_core_functionality/2_imagescan_lookuptables_timemesure/3)
 
